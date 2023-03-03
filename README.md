@@ -1,4 +1,4 @@
-# Hello World Express Example
+# Express Application with OpenTelemetry Application Metrics
 
 ## Overview
 
