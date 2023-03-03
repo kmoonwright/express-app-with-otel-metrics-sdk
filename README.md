@@ -30,3 +30,19 @@ You can now curl the app:
 curl localhost:3000
 Hello, World!
 ```
+
+## Using the OpenTelemetry Metrics SDK
+```javascript
+  // Create additional runtime metrics to emit telemetry data
+  const gauge = meter.createObservableGauge(
+    'process.runtime.nodejs.memory.heap.total',
+    {
+      unit: 'By',
+      valueType: ValueType.INT,
+    },
+  );
+  gauge.addCallback((result) => {
+    console.log('Getting value of process.memoryUsage().heapTotal');
+    result.observe(process.memoryUsage().heapTotal);
+  });
+```
