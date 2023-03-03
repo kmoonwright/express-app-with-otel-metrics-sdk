@@ -1,4 +1,4 @@
-# Express Application with OpenTelemetry Application Metrics
+# Express App with OpenTelemetry NodeJS Metrics
 
 ## Overview
 
